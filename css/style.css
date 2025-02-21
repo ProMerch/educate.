@@ -6,12 +6,12 @@ body {
     margin: 0 auto; /* Центрирование body (если есть max-width) */
     padding: 0 20px; /* Отступы слева и справа */
     width: 100vw; /* Ширина равна ширине viewport */
-    overflow: hidden; /* Скрываем всё, что выходит за пределы body */
+    overflow-x: hidden; /* Скрываем всё, что выходит за пределы body по оси X */
     box-sizing: border-box; /* Учитываем padding в общей ширине */
 }
 
 .body-container {
-    max-width: 1200px; 
+    max-width: 1200px; /* Ограничение ширины контейнера */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 0 20px; /* Отступы слева и справа */
 }
