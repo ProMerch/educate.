@@ -3,14 +3,17 @@
 }
 
 body {
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto; /* Центрирование body (если есть max-width) */
+    padding: 0 20px; /* Отступы слева и справа */
+    width: 100vw; /* Ширина равна ширине viewport */
+    overflow: hidden; /* Скрываем всё, что выходит за пределы body */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
 }
 
-.body-container { 
+.body-container {
     max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 20px; /* Отступы слева и справа */
 }
 
 header {
@@ -273,7 +276,7 @@ header .btn.register:hover {
 
 .reviews {
     padding: 50px 0;
-    background: #fff;
+    background: #C2E6FA;
     max-width: 1200px; /* Ограничиваем максимальную ширину секции */
     margin: 0 auto; /* Центрируем секцию */
 }
