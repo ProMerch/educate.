@@ -167,17 +167,46 @@ header .btn.register:hover {
     color: #333;
 }
 
+.teachers .container {
+    max-width: 1200px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 20px; /* Добавляем отступы */
+}
+
 .teachers .filters {
     display: flex;
     justify-content: space-between; /* Распределение пространства между элементами */
-    gap: 15px;
+    gap: 15px; /* Расстояние между элементами */
     margin-bottom: 20px;
     width: 100%; /* Растягиваем контейнер на всю ширину */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
 }
 
 .teachers .filters .filter {
     flex-grow: 1; /* Растягиваем каждый элемент по ширине */
     min-width: 150px; /* Минимальная ширина для каждого фильтра */
+    padding: 10px; /* Добавляем отступы внутри select */
+    font-size: 16px; /* Размер шрифта */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #fff; /* Цвет фона */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+
+.teachers .filters .filter:hover {
+    border-color: #888; /* Изменение цвета границы при наведении */
+}
+
+.teachers .filters .filter:focus {
+    outline: none; /* Убираем стандартный outline */
+    border-color: #555; /* Изменение цвета границы при фокусе */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Тень при фокусе */
+}
+
+.teacher-count {
+    font-size: 18px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin-top: 20px; /* Отступ сверху */
 }
 
 
