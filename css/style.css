@@ -1,0 +1,553 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.body-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+header .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+header .btn.login {
+    background: #C2E6FA;
+    color: #1E1E1E;
+}
+
+header .btn.login:hover {
+    background: #35A8E7;
+    color: #FFFFFF;
+}
+
+header .btn.register {
+    background: #C2E6FA;
+    color: #1E1E1E;
+}
+
+header .btn.register:hover {
+    background: #35A8E7;
+    color: #FFFFFF;
+}
+
+
+.hero-wrapper {
+    width: 100%;
+    min-height: 500px; /* Минимальная высота */
+    background: url('../img/girl.png') no-repeat center center / cover;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background: #0056b3;
+}
+
+.features {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.features .feature {
+    background: #f8f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.features .feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.features .feature p {
+    font-size: 14px;
+    color: #666;
+}
+
+.teachers {
+    padding: 50px 0;
+    background: #f8f9fc;
+}
+
+.teachers h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.teachers .filters {
+    display: flex;
+    justify-content: space-between; /* Распределение пространства между элементами */
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%; /* Растягиваем контейнер на всю ширину */
+}
+
+.teachers .filters .filter {
+    flex-grow: 1; /* Растягиваем каждый элемент по ширине */
+    min-width: 150px; /* Минимальная ширина для каждого фильтра */
+}
+
+
+.teachers .teacher-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.teachers .teacher-card {
+    background: #C2E6FA;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.teachers .teacher-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.teachers .teacher-card h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.teachers .teacher-card .subject,
+.teachers .teacher-card .experience {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Рейтинг (звезды) */
+.teachers .teacher-card .rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #ccc; /* Серый цвет для незаполненных звезд */
+}
+
+.star.filled {
+    color: #35A8E7; /* Голубой цвет для заполненных звезд */
+}
+
+.teachers .teacher-card .price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.teachers .teacher-card .price small {
+    font-size: 14px;
+    color: #888;
+}
+
+.teachers .teacher-card .btn {
+    background: #fff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.teachers .teacher-card .btn:hover {
+    background: #0056b3;
+    color: #FFFFFF;
+}
+
+.teachers .load-more {
+    background: #C3E6FA;
+    color: #15394E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.teachers .load-more:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+
+.reviews {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.reviews h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reviews .review-tabs {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.reviews .tab {
+    background: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
+
+.reviews .tab.active {
+    background: #007bff;
+    color: #fff;
+}
+
+.reviews .review-slider {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.reviews .review-card {
+    background: #f8f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews .review-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.reviews .review-card h4 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.reviews .review-card .role {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.reviews .review-card .text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.reviews .review-card .read-more {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.reviews .slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.reviews .prev, .reviews .next {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.reviews .dots {
+    display: flex;
+    gap: 5px;
+}
+
+.reviews .dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.reviews .dot.active {
+    background: #007bff;
+}
+
+.advantages {
+    padding: 50px 0;
+    background: #f8f9fc;
+}
+
+.advantages h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.advantage-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.advantage-card h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.advantage-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+
+.footer-wrapper {
+    width: 100%;
+    background-color: #383838;
+    position: relative;
+    left: 0;
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выровнять по верхнему краю */
+    gap: 20px;
+    flex-wrap: nowrap; /* Запрещает перенос элементов */
+}
+
+.footer-section {
+    flex-grow: 1; /* Равномерное распределение ширины */
+    min-width: 150px; /* Минимальная ширина для сохранения структуры */
+}
+
+.footer-section h2, .footer-section h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section p {
+    color: #FFFFFF;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .container {
+        flex-direction: column;
+    }
+
+    .features .feature {
+        margin-bottom: 20px;
+    }
+
+    .teachers .teacher-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .reviews .review-slider {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .reviews .review-card {
+        flex: 0 0 auto;
+        width: 80%;
+        margin-right: 20px;
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+}
