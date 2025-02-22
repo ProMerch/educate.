@@ -156,9 +156,30 @@ header .btn.register:hover {
     color: #666;
 }
 
+/* Секция teachers */
 .teachers {
     padding: 50px 0;
     background: #f8f9fc;
+    position: relative; /* Для позиционирования псевдоэлемента */
+    overflow: visible; /* Разрешаем отображение за пределами секции */
+    width: 100%; /* Занимает всю ширину страницы */
+}
+
+/* Вертикальный текст */
+.teachers::after {
+    content: "Educate.";
+    position: absolute;
+    right: -300px; /* Сдвигаем влево, чтобы текст был виден */
+    bottom: 50%; /* Начинаем от середины */
+    transform: rotate(-90deg) translateX(50%); /* Поворот и выравнивание */
+    transform-origin: right bottom;
+    font-size: 222px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.1); /* Полупрозрачный текст */
+    white-space: nowrap;
+    z-index: 0;
+    pointer-events: none; /* Игнорирует клики */
+    user-select: none; /* Запрещает выделение текста */
 }
 
 .teachers h2 {
