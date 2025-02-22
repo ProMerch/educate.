@@ -324,11 +324,19 @@ header .btn.register:hover {
 }
 
 
+/* Обертка для фона */
+.reviews-wrapper {
+    background: #C2E6FA; /* Заливка фона */
+    width: 100%; /* Занимает всю ширину страницы */
+}
+
+/* Внутренний контейнер */
 .reviews {
     padding: 50px 0;
-    background: #C2E6FA;
-    max-width: 1200px; /* Ограничиваем максимальную ширину секции */
-    margin: 0 auto; /* Центрируем секцию */
+    max-width: 1200px; /* Ограничиваем максимальную ширину контента */
+    margin: 0 auto; /* Центрируем контент */
+    padding-left: 20px; /* Отступы слева и справа */
+    padding-right: 20px;
 }
 
 .reviews h2 {
